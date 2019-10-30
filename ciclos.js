@@ -36,4 +36,5 @@ btn2.addEventListener("click", () => {
 //Ejercicio 03 Tabla de multiplicar
 
 var btn3 = document.querySelector("#btn3")
-x
+
+btn3.addEventListener
