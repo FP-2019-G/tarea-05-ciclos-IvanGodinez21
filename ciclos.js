@@ -14,7 +14,7 @@ btn1.addEventListener("click", () => {
     }
 })
 
-//Ejercicio 01 Del 100 al 80
+//Ejercicio 02 Del 100 al 80
 
 var btn2 = document.querySelector("#btn2")
 
@@ -32,3 +32,7 @@ btn2.addEventListener("click", () => {
         i--
     }
 })
+
+//Ejercicio 03 Tabla de multiplicar
+
+var btn3 = document.querySelector("#btn3")
