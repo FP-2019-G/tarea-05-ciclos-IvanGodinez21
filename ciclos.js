@@ -37,4 +37,10 @@ btn2.addEventListener("click", () => {
 
 var btn3 = document.querySelector("#btn3")
 
-btn3.addEventListener
+btn3.addEventListener("click", () => {
+    let inp31 = document.querySelector("#Input3.1")
+    let inp32 = document.querySelector("#Input3.2")
+    let inp33 = document.querySelector("#Input3.3")
+
+    if
+})
