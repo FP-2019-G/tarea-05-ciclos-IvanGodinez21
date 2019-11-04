@@ -38,9 +38,28 @@ btn2.addEventListener("click", () => {
 var btn3 = document.querySelector("#btn3")
 
 btn3.addEventListener("click", () => {
-    let inp31 = document.querySelector("#Input3.1")
-    let inp32 = document.querySelector("#Input3.2")
-    let inp33 = document.querySelector("#Input3.3")
+    let inp1 = document.querySelector("#input31")
+    let inp2 = document.querySelector("#input32")
+    let inp3 = document.querySelector("#input33")
+    let table = document.querySelector("#table3")
+    // otro uso sugerido es document.getElementById('tabla3')
 
-    if
+    let n1 = Number(inp1.value)
+    let n2 = Number(inp2.value)
+    let n3 = Number(inp3.value)
+
+    if (n2 > n3) {
+        alert("Porfavor ingrese un valor valido para cada limite")
+    } else {
+        do {
+            let fila = table3.insertRow(-1)
+            let celda = fila.insertCell(0)
+            let nuevo = n1 + ' x ' + n2 + ' = ' + n1*n2
+            celda.textContent = nuevo
+
+            n2++
+            }
+        while
+            (n2 <= n3)
+        }
 })
