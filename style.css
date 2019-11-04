@@ -9,6 +9,12 @@ label {
   margin-top: 10px;
 }
 
+table {
+  border: #b85c4c;
+  border-style: dashed;
+  text-align: center;
+}
+
 input {
   height: 30px;
   padding: 5px;

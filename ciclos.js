@@ -38,15 +38,16 @@ btn2.addEventListener("click", () => {
 var btn3 = document.querySelector("#btn3")
 
 btn3.addEventListener("click", () => {
-    let inp1 = document.querySelector("#input31")
-    let inp2 = document.querySelector("#input32")
-    let inp3 = document.querySelector("#input33")
     let table = document.querySelector("#table3")
+    let inp31 = document.querySelector("#input31")
+    let inp32 = document.querySelector("#input32")
+    let inp33 = document.querySelector("#input33")
+
     // otro uso sugerido es document.getElementById('tabla3')
 
-    let n1 = Number(inp1.value)
-    let n2 = Number(inp2.value)
-    let n3 = Number(inp3.value)
+    let n1 = Number(inp31.value)
+    let n2 = Number(inp32.value)
+    let n3 = Number(inp33.value)
 
     if (n2 > n3) {
         alert("Porfavor ingrese un valor valido para cada limite")
@@ -63,3 +64,27 @@ btn3.addEventListener("click", () => {
             (n2 <= n3)
         }
 })
+
+// Ejercicio 04 Suma
+
+var btn4 = document.querySelector("#btn4")
+
+btn4.addEventListener("click", () => {
+    let table = document.querySelector("#table4")
+    let inp41 = document.querySelector("#input41")
+    let inp = Number(inp41.value)
+    let i = 0
+    let s = 0
+
+    while (i != inp) {
+        i++
+        let cantidades = Number(prompt("Ingrese el No." + i))
+        let fila = table.insertRow(-1)
+        let celda = fila.insertCell(0)
+        suma = s + cantidades
+        celda.textContent = cantidades
+    }
+    let fila = table.insertRow(-1)
+    let celda = fila.insertCell(0)
+    celda.textContent = "Resultado = " + suma
+}) 
