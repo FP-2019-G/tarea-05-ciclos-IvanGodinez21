@@ -43,7 +43,7 @@ btn3.addEventListener("click", () => {
     let inp32 = document.querySelector("#input32")
     let inp33 = document.querySelector("#input33")
 
-    // otro uso sugerido es document.getElementById('tabla3')
+    // otro uso sugerido es document.getElementById("tabla3")
 
     let n1 = Number(inp31.value)
     let n2 = Number(inp32.value)
@@ -55,7 +55,7 @@ btn3.addEventListener("click", () => {
         do {
             let fila = table3.insertRow(-1)
             let celda = fila.insertCell(0)
-            let nuevo = n1 + ' x ' + n2 + ' = ' + n1*n2
+            let nuevo = n1 + " x " + n2 + " = " + n1*n2
             celda.textContent = nuevo
 
             n2++
@@ -71,20 +71,43 @@ var btn4 = document.querySelector("#btn4")
 
 btn4.addEventListener("click", () => {
     let table = document.querySelector("#table4")
-    let inp41 = document.querySelector("#input41")
+    let inp41 = document.querySelector("#input4")
     let inp = Number(inp41.value)
     let i = 0
-    let s = 0
+    let suma = 0
 
     while (i != inp) {
         i++
         let cantidades = Number(prompt("Ingrese el No." + i))
         let fila = table.insertRow(-1)
         let celda = fila.insertCell(0)
-        suma = s + cantidades
+        suma = suma + cantidades
         celda.textContent = cantidades
     }
     let fila = table.insertRow(-1)
     let celda = fila.insertCell(0)
     celda.textContent = "Resultado = " + suma
 }) 
+
+// Ejercicio 05 Factorial
+
+var btn5 = document.querySelector("#btn5")
+
+btn5.addEventListener("click", () => {
+    let lista = document.querySelector("#listas5")
+    let num = document.querySelector("#input5").value
+    let resultado = document.querySelector("#resultado5")
+    let i = 0
+    let producto = num
+
+    while (num > i) {
+        let nvo = document.createElement("li")
+        nvo.textContent = num
+        lista.appendChild(nvo)
+        if (num != 1) {
+            producto = producto * (num - 1)
+        }
+         resultado.value = producto
+         num--
+    }
+})
