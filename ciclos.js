@@ -60,8 +60,7 @@ btn3.addEventListener("click", () => {
 
             n2++
             }
-        while
-            (n2 <= n3)
+        while (n2 <= n3)
         }
 })
 
@@ -109,5 +108,48 @@ btn5.addEventListener("click", () => {
         }
          resultado.value = producto
          num--
+    }
+})
+
+// Ejercicio 06 Múltiplos
+
+var btn6 = document.querySelector("#btn6")
+
+btn6.addEventListener("click", () => {
+    let inp = document.querySelector("#input6")
+    let num = Number(inp.value)
+    let table = document.querySelector("#table6")
+    let i = 0
+
+    while (num != i) {
+        if ((num % i) == 0) {
+        let fila = table.insertRow(-1)
+        let celda = fila.insertCell(0)
+        celda.textContent = (i + " x " + (num/i) +  " = " + num)
+        }
+        i++
+    }
+})
+
+var btn7 = document.querySelector("#btn7")
+
+btn7.addEventListener("click", () => {
+    let table1 = document.querySelector("#table71")
+    let table2 = document.querySelector("#table72")
+    let i = 0
+
+    while (i < 10) {
+        let num = Number(prompt("Ingresa los numeros"))
+        if ((num % 2) == 0) {
+            let fila = table1.insertRow(-1)
+            let celda = fila.insertCell(0)
+            celda.textContent = num
+            i++
+        } else {
+            let fila = table2.insertRow(-1)
+            let celda = fila.insertCell(0)
+            celda.textContent = num
+        }
+
     }
 })
