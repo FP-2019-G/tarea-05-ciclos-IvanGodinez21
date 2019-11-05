@@ -206,11 +206,10 @@ var btn10 = document.querySelector("#btn10")
 
 btn10.addEventListener("click", () => {
     let i = 0
-    console.log(i)
 
     while (i < 5) {
         let random = Math.round(Math.random() * (50 - 20) + 20)
-        console.log(random)
+        console.log("El número secreto es " + random)
         let num = Number(prompt("Adivina el numero"))
 
         if (i === 4) {
@@ -227,3 +226,5 @@ btn10.addEventListener("click", () => {
 
     }
 })
+
+var btn11 = document.querySelector("#btn11")
