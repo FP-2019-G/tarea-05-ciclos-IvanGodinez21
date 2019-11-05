@@ -131,6 +131,8 @@ btn6.addEventListener("click", () => {
     }
 })
 
+//Ejercicio 07 Pares
+
 var btn7 = document.querySelector("#btn7")
 
 btn7.addEventListener("click", () => {
@@ -150,6 +152,78 @@ btn7.addEventListener("click", () => {
             let celda = fila.insertCell(0)
             celda.textContent = num
         }
+
+    }
+})
+
+// Ejercicio 08 Impares aleatorios
+
+var btn8 = document.querySelector("#btn8")
+
+btn8.addEventListener("click", () => {
+    let table = document.querySelector("#table8")
+    let i = 0
+
+    while (i < 20) {
+    let random = Math.round(Math.random() * (200 - 40) + 40)
+
+    if ((random % 2) == 0) {
+        let fila = table.insertRow(-1)
+        let celda = fila.insertCell(0)
+        celda.textContent = random
+        i++
+        }
+    }
+})
+
+// Ejercicio 09 Aleatorios menores a 100
+
+var btn9 = document.querySelector("#btn9")
+
+btn9.addEventListener("click", () => {
+    let table = document.querySelector("#table9")
+    let promedio = document.querySelector("#input9")
+    let suma = 0
+    let i = 0
+
+    while (i < 10) {
+    let random = Math.round(Math.random() * (100 - 0) + 0)
+
+    if ((random % 2) == 0) {
+        let fila = table.insertRow(-1)
+        let celda = fila.insertCell(0)
+        celda.textContent = random
+        suma = suma + random
+        i++
+        }
+        promedio.value = suma / 10
+    }
+})
+
+// Ejercicio 10 Adivina el número
+
+var btn10 = document.querySelector("#btn10")
+
+btn10.addEventListener("click", () => {
+    let i = 0
+    console.log(i)
+
+    while (i < 5) {
+        let random = Math.round(Math.random() * (50 - 20) + 20)
+        console.log(random)
+        let num = Number(prompt("Adivina el numero"))
+
+        if (i === 4) {
+            alert("Mejor suerte la proxima, el numero era " + random)
+            break;
+        }
+        if (num === random) {
+            alert("Adivinaste el número :D")
+            break;
+        } else if (num != random) {
+            i++
+            alert("Sigue intentando, este es el intento No." + i)
+        } 
 
     }
 })
