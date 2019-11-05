@@ -206,20 +206,20 @@ var btn10 = document.querySelector("#btn10")
 
 btn10.addEventListener("click", () => {
     let i = 0
+    let random = Math.round(Math.random() * (50 - 20) + 20)
+    console.log("El número secreto es " + random)
 
     while (i < 5) {
-        let random = Math.round(Math.random() * (50 - 20) + 20)
-        console.log("El número secreto es " + random)
         let num = Number(prompt("Adivina el numero"))
 
-        if (i === 4) {
-            alert("Mejor suerte la proxima, el numero era " + random)
-            break;
-        }
+
         if (num === random) {
             alert("Adivinaste el número :D")
             break;
-        } else if (num != random) {
+            } else if (i === 4) {
+            alert("Mejor suerte la proxima, el numero era " + random)
+            break;
+            } else if (num != random) {
             i++
             alert("Sigue intentando, este es el intento No." + i)
         } 
@@ -231,16 +231,46 @@ btn10.addEventListener("click", () => {
 
 var btn11 = document.querySelector("#btn11")
 
+btn11.addEventListener("click", () => {
+
+    alert("¿Estas listos para adivinar?, ¡Comencemos!")
+    let random1 = Math.round(Math.random() * (10 - (-10)) + (-10))
+    let random2 = Math.round(Math.random() * (10 - (-10)) + (-10))
+    let i = 0
+    console.log("(Ejercicio 11)La coordenada X es " + random1)
+    console.log("(Ejercicio 11)La coordenada Y es " + random2)
+
+    while (i < 10) {
+
+        let num1 = Number(prompt("Ingrese un valor para la coordena X"))
+        let num2 = Number(prompt("Ingrese un valor para la coordena Y"))
+ 
+
+         if (num1 == random1 && num2 == random2) {
+        alert("Lo lograste, deberias comprar un billete de loteria :O")
+        break;
+        } else if (i === 9) {
+        alert("Mejor suerte la proxima, las coordenadas eran (" + random1 + "," + random2 + ")")
+            break;
+        } else if (num1 != random1 || num2 != random2) {
+            i++
+            alert("Sigue intentando, este fue intento " + i + "/10" )
+        }
+
+    }
+    
+})
+
 //Ejercicio 12 El mayor
 
 var btn12 = document.querySelector("#btn12")
 
-btn12.addEventListener('click', () => {
+btn12.addEventListener("click", () => {
     
     let table = document.querySelector("#table12")
-    let cantidad = document.querySelector('#input121')
+    let cantidad = document.querySelector("#input121")
     let cant = Number(cantidad.value)
-    let respuesta = document.querySelector('#input122')
+    let respuesta = document.querySelector("#input122")
     let i = 0
     let nummay = 0
 
