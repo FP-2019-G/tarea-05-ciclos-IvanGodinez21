@@ -1,8 +1,11 @@
+body {
+  background-image: url(fondo.jpg);
+}
 
-input, label {
+input, label , h2, select {
   display: block;
   width: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'VT323', monospace;
 }
 
 label {
@@ -10,14 +13,20 @@ label {
 }
 
 table {
-  border: #b85c4c;
+  border: #2431a1;
   border-style: dashed;
   text-align: center;
+  font-family: 'VT323', monospace;
+}
+
+input[type=number] {
+  align-content: center;
+  margin: 5px;
 }
 
 input {
   height: 30px;
-  padding: 5px;
+  padding: 10px;
   outline: none;
   border-style: none;
   text-decoration: none;
@@ -30,13 +39,13 @@ input {
 input[type=button] {
   color: white;
   margin: 5px;
-  background-color: #ff7e67;
+  background-color: #2431a1;
   align-content: center;
 
 }
 input[type=button]:hover {
   cursor: pointer;
-  border: 1px solid #c93838;
+  border: 1px solid #8f38c9;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
@@ -44,7 +53,7 @@ input[type=button]:hover {
 input[type=button]:active {
   cursor: pointer;
   color: white;
-  background-color: #c93838;
+  background-color: #7038c9;
   box-shadow: none;
 }
 
@@ -55,9 +64,10 @@ input[type=button]:active {
 
 .container {
   width: 250px;
-  background-color: #42b883;
+  background-color: rgb(82, 165, 82);
   color: #FFF;
   margin: 20px auto;
+  border-radius: 50px;
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
