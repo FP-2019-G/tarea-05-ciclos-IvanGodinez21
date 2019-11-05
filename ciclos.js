@@ -246,17 +246,19 @@ btn11.addEventListener("click", () => {
         let num2 = Number(prompt("Ingrese un valor para la coordena Y"))
  
 
-         if (num1 == random1 && num2 == random2) {
-        alert("Lo lograste, deberias de comprar un billete de loteria 😲")
-        break;
+        if (num1 == random1 && num2 == random2) {
+            alert("Lo lograste, deberias de comprar un billete de loteria 😲")
+            break;
+        } else if (num1 === -1 && num2 === -1) {
+            alert("¿Te rindes?, las coordenadas eran (" + random1 + "," + random2 + ")")
+            break;
         } else if (i === 9) {
-        alert("Mejor suerte la proxima, las coordenadas eran (" + random1 + "," + random2 + ")")
+            alert("Mejor suerte la proxima, las coordenadas eran (" + random1 + "," + random2 + ")")
             break;
         } else if (num1 != random1 || num2 != random2) {
             i++
             alert("Sigue intentando, este fue intento " + i + "/10" )
-        }
-
+        } 
     }
     
 })
