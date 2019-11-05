@@ -227,4 +227,32 @@ btn10.addEventListener("click", () => {
     }
 })
 
+// Ejercicio 11 El juego del submarino
+
 var btn11 = document.querySelector("#btn11")
+
+//Ejercicio 12 El mayor
+
+var btn12 = document.querySelector("#btn12")
+
+btn12.addEventListener('click', () => {
+    
+    let table = document.querySelector("#table12")
+    let cantidad = document.querySelector('#input121')
+    let cant = Number(cantidad.value)
+    let respuesta = document.querySelector('#input122')
+    let i = 0
+    let nummay = 0
+
+    while (i < cant) {
+        i++
+        let num = prompt("Agruega el número " + i)
+        if (num > nummay) {
+        nummay = num
+        }
+        let fila = table.insertRow(-1)
+        let celda = fila.insertCell(0)
+        celda.textContent = num
+    }
+respuesta.value = Number(nummay)
+})
