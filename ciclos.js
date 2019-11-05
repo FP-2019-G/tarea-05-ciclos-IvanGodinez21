@@ -142,7 +142,7 @@ btn7.addEventListener("click", () => {
 
     while (i < 10) {
         let num = Number(prompt("Ingresa los numeros"))
-        if ((num % 2) == 0) {
+        if ((num % 2) == 0 && num != 0) {
             let fila = table1.insertRow(-1)
             let celda = fila.insertCell(0)
             celda.textContent = num
@@ -207,21 +207,21 @@ var btn10 = document.querySelector("#btn10")
 btn10.addEventListener("click", () => {
     let i = 0
     let random = Math.round(Math.random() * (50 - 20) + 20)
-    console.log("El número secreto es " + random)
+    console.log("(Ejercicio 10) El número secreto es " + random)
 
     while (i < 5) {
-        let num = Number(prompt("Adivina el numero"))
+        let num = Number(prompt("Adivina el numero desde el 20 al 50"))
 
 
         if (num === random) {
-            alert("Adivinaste el número :D")
+            alert("Adivinaste el número 😃")
             break;
             } else if (i === 4) {
             alert("Mejor suerte la proxima, el numero era " + random)
             break;
             } else if (num != random) {
             i++
-            alert("Sigue intentando, este es el intento No." + i)
+            alert("Sigue intentando, este fue el intento " + i + "/5")
         } 
 
     }
@@ -237,8 +237,8 @@ btn11.addEventListener("click", () => {
     let random1 = Math.round(Math.random() * (10 - (-10)) + (-10))
     let random2 = Math.round(Math.random() * (10 - (-10)) + (-10))
     let i = 0
-    console.log("(Ejercicio 11)La coordenada X es " + random1)
-    console.log("(Ejercicio 11)La coordenada Y es " + random2)
+    console.log("(Ejercicio 11) La coordenada X es " + random1)
+    console.log("(Ejercicio 11) La coordenada Y es " + random2)
 
     while (i < 10) {
 
@@ -247,7 +247,7 @@ btn11.addEventListener("click", () => {
  
 
          if (num1 == random1 && num2 == random2) {
-        alert("Lo lograste, deberias comprar un billete de loteria :O")
+        alert("Lo lograste, deberias de comprar un billete de loteria 😲")
         break;
         } else if (i === 9) {
         alert("Mejor suerte la proxima, las coordenadas eran (" + random1 + "," + random2 + ")")
